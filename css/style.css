@@ -1,0 +1,237 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/template/blog-home)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+@font-face {
+    font-family: 'exo';
+    src: url('../fonts/exo2-medium-webfont.woff2') format('woff2')/*,
+         url('exo2-medium-webfont.woff') format('woff')*/;
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'exo_bold';
+    src:/*url('exo2-bold.otf') format('truetype'),*/
+    	url('../fonts/exo2-bold-webfont.woff2') format('woff2')/*,
+        url('../exo2-bold-webfont.woff') format('woff')*/;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  padding-top: 56px;
+  background-image: url(../img/bg.png);
+  background-attachment: fixed;
+}
+.container small{
+	font-family: 'exo_bold';
+}
+.card h2{
+	font-family: 'exo';
+}
+.logo{
+	max-width: 50px;
+	max-height: 50px;
+	display: inline-block;
+
+}
+.container .card .banner{
+	transition: 0.4s;
+}
+.container .card .banner:hover{
+	position: relative;
+
+	transform: scale(1.075);
+	border-radius: 5px;
+	overflow: hidden; 
+}
+.news-title{
+	text-decoration: none;
+}
+.news-title:hover{
+	text-decoration: none;
+}
+.news-title:hover h2{
+	color:green;
+}
+.news .news-more{
+	max-height: 0px;
+  	opacity: 0;
+  	overflow: hidden;
+  	transition: max-height 0.5s ease-out,opacity 1s;
+
+}
+.news:hover .news-more{
+	max-height: 300px;
+  	opacity: 1;
+  	transition: max-height 0.5s ease-in;
+}
+.x-form{
+	height: 400px;
+	margin-top: 70px;
+	display: flex;
+    align-items: center;
+    justify-content: center
+}
+.icon img{
+	width: 40px;
+	height:40px;
+	margin-right: 5px;
+}
+.about li{
+	font-family: exo;
+}
+
+.cf {
+    clear: both;
+}
+
+.gallery {
+    margin: 40px auto auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 2px solid #666;
+    box-shadow: 0 15px 2px -8px rgba(0, 0, 0, 20%);
+
+}
+.gallery li,
+.gallery li a img,
+.gallery li span {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%
+}
+
+.gallery li {
+    border: 3px solid #444;
+    position: relative;
+    float: left;
+    margin: 5px;
+}
+
+.gallery li a img {
+    object-fit: cover;
+}
+
+.gallery li .image-name {
+    display: block;
+    position: absolute;
+    top: 0;
+    background-color: rgba(37, 37, 37, 0.75);
+    font-family: 'exo_bold';
+    font-size: 20px;
+    color: #eee;
+    text-align: center;
+    line-height: 120px;
+    text-shadow: 1px solid white 1px solid white 1px solid white #fff;
+    opacity: 0;
+    transform: rotate(0) scale(0);
+    transition: .3s linear;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+    transform: rotate(720deg) scale(1);
+}
+
+.overlay {
+    position: fixed;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 70px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.7s;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.overlay .full-cover {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overlay .close-button {
+    position: absolute;
+    opacity: 0;
+    top: -15px;
+    right: -15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgb(69, 83, 97);
+}
+
+.overlay a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    line-height: 40px;
+}
+
+.overlay img {
+    max-width: 100%;
+    min-width: 100%;
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, .5);
+}
+
+.overlay:target .preview-image {
+    animation: fullSize .4s linear;
+}
+
+.overlay:target .close-button {
+    animation: closeButton 0.5s 0.5s forwards;
+}
+
+.next-button,
+.prev-button {
+    position: absolute;
+    top: 47%;
+    opacity: 0;
+}
+    .next-button {
+       right: -35px;
+    }
+    .prev-button {
+        left: -35px;
+    }
+.next-button a,
+.prev-button a {
+    font-family: monospace;
+    font-size: 40px;
+    transform: scale(1, 1.75);
+}
+@media(min-width:960px){
+    .prev-button a,
+    .next-button a{
+        font-size: 70px ;
+    }
+    .next-button {
+        right: -90px;
+     }
+     .prev-button {
+         left: -90px;
+     }
+}
+.overlay:target .next-button,
+.overlay:target .prev-button {
+    animation: fullSize .4s .2s forwards;
+}
