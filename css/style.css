@@ -88,6 +88,7 @@ body {
 .cf {
     clear: both;
 }
+<<<<<<< HEAD
 
 .gallery {
     margin: 40px auto auto;
@@ -96,6 +97,16 @@ body {
     border: 2px solid #666;
     box-shadow: 0 15px 2px -8px rgba(0, 0, 0, 20%);
 
+=======
+.title-cf small{
+    opacity: 0;
+}
+
+/* .gallery {
+    margin: 40px auto 40px auto;
+    padding-inline: 30px;
+    list-style: none;
+>>>>>>> 5b17ff7 (fix-gallery)
 }
 .gallery li,
 .gallery li a img,
@@ -106,6 +117,10 @@ body {
 }
 
 .gallery li {
+<<<<<<< HEAD
+=======
+    margin: auto 20px;
+>>>>>>> 5b17ff7 (fix-gallery)
     border: 3px solid #444;
     position: relative;
     float: left;
@@ -234,4 +249,44 @@ body {
 .overlay:target .next-button,
 .overlay:target .prev-button {
     animation: fullSize .4s .2s forwards;
+<<<<<<< HEAD
 }
+=======
+} */
+.anti-top{
+    z-index:12;
+}
+.gallery{
+    max-width: 100%;
+    margin: 15px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.gallery a{
+    max-width: 1200px;
+}
+.image-caption{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+    transition: .4s linear;
+}
+.image-caption span{
+    font-family: exo_bold;
+    color: #fff;
+    font-size: 35px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    top: 45%;
+    
+}
+.gallery:hover .image-caption{
+    opacity: 1;
+}
+>>>>>>> 5b17ff7 (fix-gallery)
